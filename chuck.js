@@ -17,4 +17,4 @@ function getJoke() {
 	xhr.send();
 }
 
-document.addEventListener('load', function(){ getJoke(); });
+getJoke();
