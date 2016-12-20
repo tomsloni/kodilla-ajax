@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	background-color: #3a414c;
+	background: url('https://images.pexels.com/photos/131683/pexels-photo-131683.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(215, 218, 224, 0.8);
+	color: black;
+	border: 3px solid white;
+	border-radius: 5px;
+}
+
+#message span {
+	margin: 0;
+	padding-top: 40%;
+	font-size: 40px;
+}
+
+.row h1 {
+	width: 45%;	
+	line-height: 150px;
+	background-color: rgba(18, 20, 25, 0.2);
+}
+
+.row h2 {
+	width: 100%;
+}
+
+.row h3 {
+	width: 30%;
+	background-color: rgba(87, 175, 114, 0.5);
+}
+
+.row p {
+	width: 250px;
+	background-color: rgba(130, 216, 156, 0.5);
+}
+
+.row h3, .row p {
+	line-height: 20px;
+	text-align: left;
+}
+
+#countries {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.record {
+	position: relative;
+	border-radius: 5px;
+	width: 100%;
+	margin: 20px auto;
+	background-color: rgba(193, 242, 208, 0.3);
+	opacity: 0.3;
+	transition: 0.3s;
+}
+
+.record:hover {
+	opacity: 1;
+}
+
+.record * {
+	display: inline-block;
+	margin: 0;
+	padding: 3px;
+}
+
+#image {
+	width: 45%;
+	height: 150px;
+	background-color: rgba(18, 20, 25, 0.1);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+/* FLOATS */
+#image, h3 {
+	float: left;
+}
+
+.row h1, .row p {
+	float: right;
+}
+
+/* BORDER RADIUS */
+
+.bar, .row * {
+	border-radius: 5px;
+}
+.bar {
+	height: 30px;
+	width: 80%;
+	background-color: rgba(58, 173, 93, 0.8);
+}
+
+.row {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.down-margin {
+	margin-bottom: 15px;
+}
