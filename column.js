@@ -6,7 +6,8 @@ function Column(id, name) {
 	this.$element = createColumn();
 
 	function createColumn() {
-		var $column = $('<li>').addClass('column col-m-3 col-s-10 col-offset-s-1');
+//		var $column = $('<li>').addClass('column col-m-3 col-s-10 col-offset-s-1');
+		var $column = $('<div>').addClass('column col-m-3 col-s-10 col-offset-s-1');
 		var $columnHead = $('<div>').addClass('column-head col-m-12 col-s-12');
 		var $columnCntrLeft = $('<div>').addClass('columnCntrLeft col-m-2 col-s-12');
 		var $columnCntrCenter = $('<div>').addClass('columnCntrCenter col-m-8 col-s-12');
@@ -56,6 +57,7 @@ function Column(id, name) {
 Column.prototype = {
 	addCard: function(card) {
 		this.$element.children('ul').append(card.$element);
+		initCardSortable();
 	},
 	removeColumn: function() {
 		var self = this;

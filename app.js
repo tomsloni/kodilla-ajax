@@ -14,10 +14,9 @@ $.ajax({
 	url: baseUrl + '/board',
 	method: 'GET',
 	success: function(response) {
-		var board = new Board(response.id, response.name);
 		setupColumns(response.columns, board);
 	}
-})
+});
 
 function setupColumns(columns, board) {
 	columns.forEach(function (column) {
@@ -30,45 +29,16 @@ function setupColumns(columns, board) {
 function setupCards(col, cards) {
 	cards.forEach(function (card) {
 		var card = new Card(card.id, card.name, card.bootcamp_kanban_column_id);
-		card.createCard();
-	})
+		col.addCard(card);
+	});
 }
 
 // BOARD CREATION
 
 $('.create-board').click(function() {
-		var boardName = prompt('Wpisz nazwę tablicy');
-		$.ajax({
-			url: baseUrl + '/board',
-			method: 'POST',
-			data: {
-				name: boardName,
-				id: self.id
-			},
-			success: function(response) {
-				var boardNew = new Board(response.id, boardName);
-				addBoard(boardNew);
-			}
-		});
+	window.alert('W tej wersji dostępna jest tylko jedna tablica');
+});
 
-
-	});
-/*
-	$columnAddCard.click(function() {
-		var cardName = prompt('Wpisz nazwę karty');
-		$.ajax({
-			url: baseUrl + '/card',
-			method: 'POST',
-			data: {
-				name: cardName,
-				bootcamp_kanban_column_id: self.id
-			},
-			success: function(response) {
-				var card = new Card(response.id, cardName);
-				self.addCard(card);
-			}
-		});
-	});
 
 /*
 $('.create-board').click(function() {
@@ -76,4 +46,4 @@ $('.create-board').click(function() {
 		var boardNew = new Board(name);
 		addBoard(boardNew);
 	});
-	*/
+*/
