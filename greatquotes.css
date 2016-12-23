@@ -1,0 +1,45 @@
+﻿* {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	margin: 0;
+	background-color: #55ACEE;
+	text-align: center;
+	color: #F7F8FC;
+}
+
+.row {
+	width: 100%;
+	padding: 20px 0;
+}
+
+.button {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 15px;
+	box-sizing: initial;
+	cursor: pointer;
+	color: #F7F8FC;
+	width: 300px;
+	height: 40px;
+	border: 2px solid #F7F8FC;
+	border-radius: 3px;
+	background-color: inherit;
+	opacity: 0.5;
+	transition: 0.4s;
+}
+
+.button:hover {
+	opacity: 1;
+}
+
+.button p, .button i {
+	display: inline-block;
+	margin: auto 0;
+	line-height: 40px;
+}
