@@ -1,8 +1,7 @@
-﻿$(function(){ 
+﻿$(function(){
 	var url = 'http://api.forismatic.com/api/1.0/?method=getQuote&key=867576&format=jsonp&lang=en&jsonp=?';
 	var tweetLink = "https://twitter.com/intent/tweet?text=";
 
-	$('#generate').trigger('click');
 	$('#generate').on('click', function() {
 		getQuote();
 	});
@@ -28,5 +27,5 @@
 		}
 	}
 
-	getQuote(); 
+	getQuote();
 });
