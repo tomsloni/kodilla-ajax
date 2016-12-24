@@ -15,6 +15,10 @@ function Card(id, name, column_id) {
 			self.removeCard();
 		});
 
+		$card.dblclick(function() {
+			self.editCard();
+		})
+
 		$card.append($cardDelete)
 				.append($cardDescription);
 			return $card;
@@ -29,6 +33,31 @@ Card.prototype = {
 			method: 'DELETE',
 			success: function(){
 				self.$element.remove();
+			}
+		});
+	},
+	editCard: function() {
+		var self = this;
+		var newCardName = prompt('Wpisz nową nazwę karty');
+		$.ajax({
+			url: baseUrl + '/card',
+			method: 'PUT',
+			data: {
+				name: newCardName,
+			},
+			success: function(response){
+				self.name = newCardName,
+				console.log(name);
+			}
+		});
+	},
+	changeCardPlace: function() {
+		var self = this;
+		$.ajax({
+			url: baseUrl + '/card/' + self.id,
+			method: 'PUT',
+			success: function(){
+				col.log('success');
 			}
 		});
 	}

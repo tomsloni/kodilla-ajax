@@ -67,6 +67,19 @@ Column.prototype = {
 			success: function(response){
 				self.$element.remove();
 			}
+		})
+	},
+	changeCardPlace: function() {
+		var self = this;
+		$.ajax({
+			url: baseUrl + '/card/' + self.id,
+			method: 'PUT',
+			data: {
+				bootcamp_kanban_column_id: self.id
+			},
+			success: function(){
+				col.log('success');
+			}
 		});
 	}
 }
