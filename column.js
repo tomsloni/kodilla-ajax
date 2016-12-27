@@ -12,7 +12,7 @@ function Column(id, name) {
 		var $columnCntrLeft = $('<div>').addClass('columnCntrLeft col-m-2 col-s-12');
 		var $columnCntrCenter = $('<div>').addClass('columnCntrCenter col-m-8 col-s-12');
 		var $columnCntrRight = $('<div>').addClass('columnCntrRight col-m-2 col-s-12');
-		var $columnTitle = $('<h2>').addClass('column-title').text('Kolumna ' + self.name);
+		var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
 		var $columnCardList = $('<ul>').addClass('column-card-list');
 		var $columnDelete = $('<button>').addClass('btn-delete').text('x');
 		var $columnAddCard = $('<button>').addClass('add-card').text('+');
